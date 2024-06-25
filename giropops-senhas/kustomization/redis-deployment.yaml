@@ -9,10 +9,12 @@ spec:
   selector:
     matchLabels:
       app: redis
+      giropops: strigus
   template:
     metadata:
       labels:
         app: redis
+        giropops: strigus
     spec:
       containers:
       - image: redis

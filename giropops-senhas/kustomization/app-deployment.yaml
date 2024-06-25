@@ -9,10 +9,12 @@ spec:
   selector:
     matchLabels:
       app: giropops-senhas
+      giropops: strigus
   template:
     metadata:
       labels:
         app: giropops-senhas
+        giropops: strigus
     spec:
       containers:
       - image: linuxtips/giropops-senhas:1.0

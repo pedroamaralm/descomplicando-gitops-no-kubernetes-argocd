@@ -20,3 +20,10 @@ spec:
         name: redis
         ports:
         - containerPort: {{ .Values.redis.port }}
+        resources:
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
+          requests:
+            memory: "128Mi"
+            cpu: "250m"
