@@ -4,16 +4,19 @@ kind: Deployment
 metadata:
   labels:
     app: redis
+    giropops: strigus
   name: redis-deployment
 spec:
   replicas: {{ .Values.redis.replicas }}
   selector:
     matchLabels:
       app: redis
+      giropops: strigus
   template:
     metadata:
       labels:
         app: redis
+        giropops: strigus
     spec:
       containers:
       - image: {{ .Values.redis.image }}

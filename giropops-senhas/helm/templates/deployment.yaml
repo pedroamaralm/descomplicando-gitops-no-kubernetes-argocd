@@ -4,16 +4,19 @@ kind: Deployment
 metadata:
   labels:
     app: giropops-senhas
+    giropops: strigus
   name: giropops-senhas
 spec:
   replicas: {{ .Values.giropopsSenhas.replicas }}
   selector:
     matchLabels:
       app: giropops-senhas
+      giropops: strigus
   template:
     metadata:
       labels:
         app: giropops-senhas
+        giropops: strigus
     spec:
       containers:
       - image: {{ .Values.giropopsSenhas.image }}
